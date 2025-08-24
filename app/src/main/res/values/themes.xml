@@ -2,4 +2,10 @@
 <resources>
 
     <style name="Theme.FoodHumAndroid" parent="android:Theme.Material.Light.NoActionBar" />
+
+    <style name="SplashThem" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground" >@color/white</item>
+        <item name="postSplashScreenTheme">@style/Theme.FoodHumAndroid</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/animated_logo</item>
+    </style>
 </resources>
