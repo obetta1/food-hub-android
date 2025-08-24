@@ -1,0 +1,154 @@
+{
+  "project_info": {
+    "project_number": "914492074984",
+    "project_id": "calltest-be3f6",
+    "storage_bucket": "calltest-be3f6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:914492074984:android:892ebf3c105fd77ffcd25d",
+        "android_client_info": {
+          "package_name": "com.ben.fintechapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "914492074984-gqro6hg3cdv4c3p66u38s1gbp8hv8inu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_9pn0vDLw_Nvx4adkFl4AIgpFfcswz54"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "914492074984-gqro6hg3cdv4c3p66u38s1gbp8hv8inu.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "914492074984-1huaa4i0jt2pqvffd5uvs5move7fshhg.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.callTest"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:914492074984:android:ef4eb28c0d32db72fcd25d",
+        "android_client_info": {
+          "package_name": "com.example.call_test"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "914492074984-gqro6hg3cdv4c3p66u38s1gbp8hv8inu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_9pn0vDLw_Nvx4adkFl4AIgpFfcswz54"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "914492074984-gqro6hg3cdv4c3p66u38s1gbp8hv8inu.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "914492074984-1huaa4i0jt2pqvffd5uvs5move7fshhg.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.callTest"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:914492074984:android:cceb89866b8a6879fcd25d",
+        "android_client_info": {
+          "package_name": "com.example.foodhumandroid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "914492074984-gqro6hg3cdv4c3p66u38s1gbp8hv8inu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_9pn0vDLw_Nvx4adkFl4AIgpFfcswz54"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "914492074984-gqro6hg3cdv4c3p66u38s1gbp8hv8inu.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "914492074984-1huaa4i0jt2pqvffd5uvs5move7fshhg.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.callTest"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:914492074984:android:2ae8e7dbb5934835fcd25d",
+        "android_client_info": {
+          "package_name": "com.example.image_text_ai"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "914492074984-gqro6hg3cdv4c3p66u38s1gbp8hv8inu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_9pn0vDLw_Nvx4adkFl4AIgpFfcswz54"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "914492074984-gqro6hg3cdv4c3p66u38s1gbp8hv8inu.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "914492074984-1huaa4i0jt2pqvffd5uvs5move7fshhg.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.callTest"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
