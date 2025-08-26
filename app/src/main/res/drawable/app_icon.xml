@@ -4,8 +4,8 @@
     android:viewportWidth="106"
     android:width="50dp">
     <group android:name="animationGroup"
-        android:pivotX="53dp"
-        android:pivotY="53dp">
+        android:pivotX="53"
+        android:pivotY="53">
 
         <path android:fillColor="#ffffff" android:pathData="M0,24C0,10.745 10.745,0 24,0H69C82.255,0 93,10.745 93,24V69C93,82.255 82.255,93 69,93H24C10.745,93 0,82.255 0,69V24Z"/>
 

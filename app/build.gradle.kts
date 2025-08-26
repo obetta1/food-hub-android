@@ -119,3 +119,6 @@ dependencies {
     implementation("com.google.firebase:firebase-messaging-ktx")
     implementation("com.google.maps.android:android-maps-utils:3.8.2")
 }
+kapt{
+    correctErrorTypes = true
+}
