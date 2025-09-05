@@ -9,10 +9,13 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
@@ -22,6 +25,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.painter.Painter
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
@@ -32,46 +37,58 @@ import androidx.compose.ui.unit.IntSize
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.foodhumandroid.R
+import com.example.foodhumandroid.ui.features.widgets.SingUpWidget
 import com.example.foodhumandroid.ui.theme.Orange
 import com.example.foodhumandroid.ui.theme.White
 import com.example.foodhumandroid.ui.theme.textBlack
-import okhttp3.internal.wait
 
 @Composable
-fun AuthScreen(){
+fun AuthScreen() {
     val imageSize = remember {
         mutableStateOf(IntSize.Zero)
     }
     val brush = Brush.verticalGradient(
         colors = listOf(Color.Transparent, Color.Black),
-        startY = imageSize.value.height.toFloat()/3,
+        startY = imageSize.value.height.toFloat() / 3,
     )
-    Box(modifier = Modifier
-        .fillMaxSize()
-        .background(Color.Black)){
-        Image(painter = painterResource(id = R.drawable.auth_bg), contentDescription = null,
+    Box(
+        modifier = Modifier
+            .fillMaxSize()
+            .background(Color.Black)
+    ) {
+        Image(
+            painter = painterResource(id = R.drawable.auth_bg), contentDescription = null,
             modifier = Modifier
                 .onGloballyPositioned {
                     imageSize.value = it.size
                 }
-                .alpha(0.6f)
+                .alpha(0.6f),
+            contentScale = ContentScale.FillBounds
         )
-       Box(modifier = Modifier
-           .matchParentSize()
-           .background(brush = brush))
-        Button(onClick = {}, colors = ButtonDefaults.buttonColors(containerColor = Color.White),
+        Box(
+            modifier = Modifier
+                .matchParentSize()
+                .background(brush = brush)
+        )
+        Button(
+            onClick = {}, colors = ButtonDefaults.buttonColors(containerColor = Color.White),
             modifier = Modifier
                 .align(Alignment.TopEnd)
-                .padding(8.dp) ) {
-            Text(stringResource(R.string.skip),
+                .padding(top = 18.dp)
+                .padding(8.dp)
+        ) {
+            Text(
+                stringResource(R.string.skip),
                 color = Color.Black,
 
-            )
+                )
         }
 
-        Column(modifier = Modifier
-            .padding(top = 100.dp)
-            .padding(16.dp)) {
+        Column(
+            modifier = Modifier
+                .padding(top = 100.dp)
+                .padding(16.dp)
+        ) {
             Text(
                 "Welcome to", color = Color.Black,
                 fontSize = 50.sp,
@@ -89,53 +106,28 @@ fun AuthScreen(){
                 fontWeight = FontWeight.Bold,
             )
         }
-        Column(modifier = Modifier
-            .align(Alignment.BottomCenter)) {
-
-            Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.Center) {
-                Button(onClick = {},
-                    modifier = Modifier.padding(16.dp),
-                    colors = ButtonDefaults.buttonColors(containerColor = Color.Gray.copy(alpha = 0.2f)),
-                    shape = RoundedCornerShape(32.dp),
-                    border = BorderStroke(1.dp, color = Color.White)
-                ) {
-                    Row {
-                        Image(painter = painterResource(R.drawable))
-                    }
-                    Text(
-                        stringResource(R.string.facebook),
-                        color = White,
-                        fontSize = 17.sp,
-                        fontWeight = FontWeight.Normal,
-                    )
-                }
-                Button(onClick = {},
-                    modifier = Modifier.padding(16.dp),
-                    colors = ButtonDefaults.buttonColors(containerColor = Color.Gray.copy(alpha = 0.2f)),
-                    shape = RoundedCornerShape(32.dp),
-                    border = BorderStroke(1.dp, color = Color.White)
-                ) {
-                    Text(
-                        stringResource(R.string.google),
-                        color = White,
-                        fontSize = 17.sp,
-                        fontWeight = FontWeight.Normal,
-
-                    )
-                }
-            }
-            Button(onClick = {},
-                modifier = Modifier.fillMaxWidth().padding(16.dp),
+        Column(
+            modifier = Modifier
+                .align(Alignment.BottomCenter).padding(16.dp),
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            SingUpWidget(color = Color.White, onClickFacebook = {}, onClickGoogle = {})
+            Button(
+                onClick = {},
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(top = 23.dp),
                 colors = ButtonDefaults.buttonColors(containerColor = Color.Gray.copy(alpha = 0.2f)),
                 shape = RoundedCornerShape(32.dp),
                 border = BorderStroke(1.dp, color = Color.White)
             ) {
                 Text(
-                stringResource(R.string.start_with_email_or_phone),
-                color = White,
-                fontSize = 17.sp,
-                fontWeight = FontWeight.Normal,
-            )
+                    stringResource(R.string.start_with_email_or_phone),
+                    color = White,
+                    fontSize = 17.sp,
+                    fontWeight = FontWeight.Normal,
+                    modifier = Modifier.padding(18.dp)
+                )
 
             }
 //
@@ -145,13 +137,15 @@ fun AuthScreen(){
                 fontSize = 16.sp,
                 fontWeight = FontWeight.Normal,
                 modifier = Modifier
-                    .padding(bottom = 28.dp)
-                    .padding(16.dp),
+                    .padding(bottom = 49.dp, top = 24.dp)
+                    ,
                 textAlign = TextAlign.Center
             )
         }
     }
 }
+
+
 @Preview(showBackground = true)
 @Composable
 fun GreetingPreview() {

@@ -1,6 +1,7 @@
 package com.example.foodhumandroid.data
 
 import android.content.Context
+import com.example.foodhumandroid.data.repository.FoodApi
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -44,7 +45,7 @@ object NetworkModule {
 
     @Provides
     @Singleton
-    fun provideFoodApi(retrofit: Retrofit): FoodApi{
+    fun provideFoodApi(retrofit: Retrofit): FoodApi {
         return  retrofit.create(FoodApi::class.java)
     }
 

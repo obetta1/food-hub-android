@@ -8,6 +8,7 @@ import android.view.animation.OvershootInterpolator
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
@@ -17,13 +18,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.core.animation.doOnEnd
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
-import com.example.foodhumandroid.data.FoodApi
-import com.example.foodhumandroid.ui.features.aut.AuthScreen
+import com.example.foodhumandroid.data.repository.FoodApi
+import com.example.foodhumandroid.ui.features.aut.signUp.SignUpScreen
 import com.example.foodhumandroid.ui.theme.FoodHumAndroidTheme
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import javax.inject.Inject
@@ -75,10 +75,12 @@ class MainActivity : ComponentActivity() {
         setContent {
             FoodHumAndroidTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
+                    Box(modifier = Modifier.padding(innerPadding))
+                    SignUpScreen()
+//                    Greeting(
+//                        name = "Android",
+//                        modifier = Modifier.padding(innerPadding)
+//                    )
                 }
             }
         }
